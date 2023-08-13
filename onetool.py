@@ -355,9 +355,7 @@ def alltools():
   print(f"{nc}18) EvilUrl")
   print(f"{nc}19) striker")
   print(f"{nc}20) zphisher")
-  print(f"{nc}21) sherlock")
-  print(f"{nc}22) userrecon")
-  print(f"{nc}23) PhoneInfoga")
+ 
   print(f"{nc}00) Back ")
     
   opt=input(">>>")
@@ -496,7 +494,8 @@ def alltools():
       os.system("git clone https://github.com/s0md3v/ReconDog && cd ReconDog")
       os.system("pip install -r requirements.txt")
       cls()
-      print("")
+      print(f"{green} Successfully Install ReconDog ")
+      print(f"{green} Type your terminal python dog ")
 
   elif opt=="00" or opt=="0":
     cls()
