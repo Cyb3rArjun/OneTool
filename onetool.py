@@ -533,54 +533,6 @@ def alltools():
       cls()
       print("")
 
-  elif opt=="15":
-      cls()
-   
-
-  elif opt=="16":
-      cls()
-      pkg="php"
-      pkg_install(pkg)
-
-  elif opt=="17":
-      cls()
-      pkg="racket"
-      pkg_install(pkg)
-
-  elif opt=="18":
-      cls()
-      pkg="ruby"
-      pkg_install(pkg)
-
-  elif opt=="19":
-      cls()
-      pkg="rust"
-      pkg_install(pkg)
-
-  elif opt=="20":
-      cls()
-      pkg="scala"
-      pkg_install(pkg)
-
-  elif opt=="21":
-      cls()
-      pkg="swift"
-      pkg_install(pkg)
-
-  elif opt=="22":
-      cls()
-      pkg="mariadb"
-      pkg_install(pkg)
-
-  elif opt=="23":
-      cls()
-      pkg="postgresql"
-      pkg_install(pkg)
-
-  elif opt=="00" or opt=="0":
-      cls()
-      menu()
-    
   else:
       print("Wrong Enter! please input available option")  
       os.system("clear") 
