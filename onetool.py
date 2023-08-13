@@ -82,7 +82,7 @@ def menu():
      
   elif ent=="03" or ent=="3":
      cls()
-     alltool()
+     alltools()
      
   elif ent=="04" or ent=="4":
      cls()
@@ -333,7 +333,7 @@ def language():
       
 
   
-def language():
+def alltools():
   print(f"""{nc}===========*All Hacking Tools*==========""")
   print(f"{nc}01) Nmap")
   print(f"{nc}02) Metasploit")
