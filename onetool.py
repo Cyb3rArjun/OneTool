@@ -349,12 +349,12 @@ def alltools():
   print(f"{nc}12) Routersploit")
   print(f"{nc}13) Infoga")
   print(f"{nc}14) ReconDog")
-  print(f"{nc}15) MapEye")
+  print(f"{nc}15) Zphisher")
   print(f"{nc}16) Easymap")
   print(f"{nc}17)  Crips")
   print(f"{nc}18) EvilUrl")
   print(f"{nc}19) striker")
-  print(f"{nc}20) zphisher")
+  print(f"{nc}20) ")
  
   print(f"{nc}00) Back ")
     
@@ -362,8 +362,9 @@ def alltools():
   if opt=="01" or opt=="1":
     cls()
     print(f"{orange} Installing Nmap ")
-    os.system("apt update && apt upgrade")
+    os.system("apt update && apt upgrade -y")
     os.system("apt install nmap")
+    cls()
     print(f"{green} Successfully Install Nmap")
       
   elif opt=="02" or opt=="2":
@@ -496,6 +497,18 @@ def alltools():
       cls()
       print(f"{green} Successfully Install ReconDog ")
       print(f"{green} Type your terminal python dog ")
+
+  elif opt=="15":
+    cls()
+    print(f"{orange} Installing Zphisher ")
+    os.system("apt update && apt upgrade -y")
+    os.system("apt install git curl wget php -y")
+    os.system("cd && git clone https://github.com/htr-tech/zphisher.git")
+    os.system("cd zphisher ")
+    cls()
+    print(f"{green} Successfully Install Zphisher")
+    print(f"{green} type your terminal bash zphisher.sh ")
+    
 
   elif opt=="00" or opt=="0":
     cls()
