@@ -14,10 +14,10 @@ Termux(Android)
 OneTool Installation
 
 ```bash
-  chmod +X install.sh
-  ./install.sh
-  
-   python onetool.py
+    apt update &&  apt upgrade -y
+    apt install python3 git -y
+    cd OneTool
+     python onetool.py
 
 ```
 ## Authors
