@@ -54,11 +54,11 @@ def pkg_install(pkg):
      
 def logo():
   print(f"""     
-               █▀█ █▄░█ █▀▀ ▄▄ ▀█▀ █▀█ █▀█ █░░
-               █▄█ █░▀█ ██▄ ░░ ░█░ █▄█ █▄█ █▄▄
-                         {red}Version :{nc} {version} {nc}
-                         {red}CodeBy  :{nc} {codeby} {nc}
-                         {red}Github  :{nc} https://github.com/AlockDj{nc}             
+     █▀█ █▄░█ █▀▀ ▄▄ ▀█▀ █▀█ █▀█ █░░
+     █▄█ █░▀█ ██▄ ░░ ░█░ █▄█ █▄█ █▄▄
+         {red}Version :{nc} {version} {nc}
+         {red}CodeBy  :{nc} {codeby} {nc}
+         {red}Github  :{nc} https://github.com/AlockDj{nc}             
                                                                     
                                                                     """)
 def menu():
@@ -358,41 +358,6 @@ def alltools():
   print(f"{nc}21) sherlock")
   print(f"{nc}22) userrecon")
   print(f"{nc}23) PhoneInfoga")
-  print(f"{nc}24) ADB-Toolkit")
-  print(f"{nc}25) EagleEye")
-  print(f"{nc}26) InSpy")
-  print(f"{nc}27) WebSploit")
-  print(f"{nc}28) sqlmate")
-  print(f"{nc}29) XSStrike")
-  print(f"{nc}30) Sn1per")
-  print(f"{nc}31) Instahack")
-  print(f"{nc}32) Crunch")
-  print(f"{nc}33) Gemail-Hack")
-  print(f"{nc}34) BurteX")
-  print(f"{nc}35) brutespray")
-  print(f"{nc}36) elpscrk")
-  print(f"{nc}37) fbht")
-  print(f"{nc}38) Aircrack-ng")
-  print(f"{nc}39) wifite")
-  print(f"{nc}40) Wifiphisher")
-  print(f"{nc}41) apktool")
-  print(f"{nc}42) jadx")
-  print(f"{nc}43) A-rat")
-  print(f"{nc}44) Commix")
-  print(f"{nc}45) zerodoor")
-  print(f"{nc}46) knockMail")
-  print(f"{nc}47) Ettercap")
-  print(f"{nc}48) hping3")
-  print(f"{nc}49) tshark")
-  print(f"{nc}50) dos2unix")
-  print(f"{nc}51) Pdfinfo")
-  print(f"{nc}52) SocialFish")
-  print(f"{nc}53) LiteOTP")
-  print(f"{nc}54)F4K#")
-  print(f"{nc}55) Cookie-stealer")
-  print(f"{nc}56) zphisher")
-  print(f"{nc}57) Evilginx")
-  print(f"{nc}58) ghost-Phisher")
   print(f"{nc}00) Back ")
     
   opt=input(">>>")
@@ -532,6 +497,11 @@ def alltools():
       os.system("pip install -r requirements.txt")
       cls()
       print("")
+
+  elif opt=="00" or opt=="0":
+    cls()
+    logo()
+    menu()
 
   else:
       print("Wrong Enter! please input available option")  
