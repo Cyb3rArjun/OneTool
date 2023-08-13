@@ -94,6 +94,7 @@ def menu():
   else:
      print("Wrong Enter Pleas input Available options !")
      cls()
+     logo()
      menu()
   
 
