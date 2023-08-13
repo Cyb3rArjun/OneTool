@@ -350,12 +350,7 @@ def alltools():
   print(f"{nc}13) Infoga")
   print(f"{nc}14) ReconDog")
   print(f"{nc}15) Zphisher")
-  print(f"{nc}16) Easymap")
-  print(f"{nc}17)  Crips")
-  print(f"{nc}18) EvilUrl")
-  print(f"{nc}19) striker")
-  print(f"{nc}20) ")
- 
+  
   print(f"{nc}00) Back ")
     
   opt=input(">>>")
