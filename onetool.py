@@ -11,54 +11,42 @@ red = "\033[31m"
 green = "\033[32m"
 orange = "\033[33m"
 nc = "\033[36m"
+blod = "\033[1m"
 
 #version
 version = "0.1.0"
 #editior
 codeby="Cyb3rArjun"
-opkg="x11-repo"
 
 def cls():
   if sys.platform.startswith('win'):
       subprocess.run('cls', shell=True)
   else:
      subprocess.run('clear', shell=True)
-     
-def linux_pkg(lpkg):
-  os.system("apt install {lpkg} -y")
 
 def update():
-   
-    print(f"{orange}Update Tool")
+    print(f"{orange}{blod}Update Tool")
     print("")
     print("This will update the tool from the git repo.")
     print("Any changes made to the tool will be overwritten.")
     os.system("sleep 2")
     print("")
-    print("Are you sure you want to update the tool?")
+    print(f"{blod}Are you sure you want to update the tool?")
     ans = input("[Y/N] ").lower()
     if ans == "y":
         subprocess.run(["git", "pull"])
-        print("Tool updated successfully!")
+        print(f"{green} {blod}Tool updated successfully!")
         os.system("sleep 2")
     else:
-        print("Update cancelled.")
-
-def pkg_install(pkg):
-  print(f"{green} {pkg} installing ....")
-  os.system("apt install {pkg} -y ")
-  os.system("sleep 2")
-  os.system("clear")
-  print(f"{green}Successfully Install !")
-  print(f"{orange}Now Type {pkg} on your Terminal ")
+        print(f"{red} {blod}Update cancelled.")
      
 def logo():
   print(f"""     
-     █▀█ █▄░█ █▀▀ ▄▄ ▀█▀ █▀█ █▀█ █░░
-     █▄█ █░▀█ ██▄ ░░ ░█░ █▄█ █▄█ █▄▄
-         {red}Version :{nc} {version} {nc}
-         {red}CodeBy  :{nc} {codeby} {nc}
-         {red}Github  :{nc} https://github.com/AlockDj{nc}             
+   {blod}  █▀█ █▄░█ █▀▀ ▄▄ ▀█▀ █▀█ █▀█ █░░
+   {blod}  █▄█ █░▀█ ██▄ ░░ ░█░ █▄█ █▄█ █▄▄
+         {red}{blod}Version :{nc} {version} {nc}
+         {red}{blod}CodeBy  :{nc} {codeby} {nc}
+         {red}{blod}Github  :{nc} https://github.com/AlockDj{nc}             
                                                                     
                                                                     """)
 def menu():
@@ -98,14 +86,14 @@ def menu():
      menu()
   
 
-def alltool_install(ati):
-   print(f"{green} {ati} installing ....")
+def pkg_install(pkg):
+   print(f"{green} {pkg} installing ....")
    os.system("apt update -y && apt upgrade -y")
-   os.system("apt install {ati} -y ")
+   os.system(f"apt install {pkg} -y ")
    os.system("sleep 2")
    os.system("clear")
-   print(f"{green}Successfully Install !")
-   print(f"{orange}Now Type {ati} on your Terminal ")
+   print(f"{green}{blod}Successfully Install !")
+   print(f"{orange}{blod} Now Type {ati} on your Terminal ")
      
    
 def funscript():
@@ -147,18 +135,25 @@ def funscript():
       
   elif opt=="06" or opt=="6":
       cls()
-      lpkg=opkg
-      pkg="oneko"
-      linux_pkg(lpkg)
-      pkg_install(pkg)
+      print(f"{green} oneko installing ....")
+      os.system("apt update -y && apt upgrade -y")
+      os.system("apt install x11-repo -y")
+      os.system(f"apt install oneko-sakura -y ")
+      os.system("sleep 2")
+      os.system("clear")
+      print(f"{green}{blod}Successfully Install !")
+      print(f"{orange}{blod} Now Type {ati} on your Terminal ")
 
       
   elif opt=="07" or opt=="7":
      cls()
-     lpkg=opkg
-     pkg="aafire"
-     linux_pkg(lpkg)
-     pkg_install(pkg)
+     print(f"{green} aafire installing ....")
+     os.system("apt update -y && apt upgrade -y")
+     os.system(f"apt install aalib -y ")
+     os.system("sleep 2")
+     os.system("clear")
+     print(f"{green}{blod}Successfully Install !")
+     print(f"{orange}{blod} Now Type aafire on your Terminal ")
       
   elif opt=="00" or opt=="0":
       cls()
@@ -177,26 +172,21 @@ def language():
   print(f"{nc}01) Python 2 ")
   print(f"{nc}02) Python 3")
   print(f"{nc}03) C/C++       ")
-  print(f"{nc}04) D ")
-  print(f"{nc}05) Dart ")
-  print(f"{nc}06) Elixir")
-  print(f"{nc}07) Erlang")
-  print(f"{nc}08) Forth")
-  print(f"{nc}09) Go ")
-  print(f"{nc}10) Groovy")
-  print(f"{nc}11) OpenJDk")
-  print(f"{nc}12) NodeJS")
-  print(f"{nc}13) Kotlin")
-  print(f"{nc}14) Lua")
-  print(f"{nc}15) Perl")
-  print(f"{nc}16) PHP")
-  print(f"{nc}17) Racket ")
-  print(f"{nc}18) Ruby")
-  print(f"{nc}19) Rust")
-  print(f"{nc}20) Scala")
-  print(f"{nc}21) Swift")
-  print(f"{nc}22) MariaDB")
-  print(f"{nc}23) Postgresql")
+  print(f"{nc}04) Dart ")
+  print(f"{nc}05) Elixir")
+  print(f"{nc}06) Go ")
+  print(f"{nc}07) Groovy")
+  print(f"{nc}08) OpenJDk")
+  print(f"{nc}09) NodeJS")
+  print(f"{nc}10) Kotlin")
+  print(f"{nc}11) Perl")
+  print(f"{nc}12) PHP")
+  print(f"{nc}13) Racket ")
+  print(f"{nc}14) Ruby")
+  print(f"{nc}15) Scala")
+  print(f"{nc}16) Swift")
+  print(f"{nc}17) MariaDB")
+  print(f"{nc}18) Postgresql")
   print(f"{nc}00) Back ")
     
   opt=input(">>>")
@@ -215,117 +205,100 @@ def language():
       pkg="clang"
       pkg_install(pkg)
       
-      
+    
   elif opt=="04" or opt=="4":
-      cls()
-      pkg="ldc"
-      pkg_install(pkg)
-      
-  elif opt=="05" or opt=="5":
       cls()
       pkg="dart"
       pkg_install(pkg)
       
-  elif opt=="06" or opt=="6":
+  elif opt=="05" or opt=="5":
      cls()
      pkg="elixir"
      pkg_install(pkg)
-      
-  elif opt=="07" or opt=="7":
-      cls()
-      pkg="erlang"
-      pkg_install(pkg)
 
-  elif opt=="08" or opt=="8":
+
+  elif opt=="06" or opt=="6":
       cls()
       pkg="pforth"
       pkg_install(pkg)
 
 
-  elif opt=="09" or opt=="9":
+  elif opt=="07" or opt=="7":
       cls()
       pkg="golang"
       pkg_install(pkg)
 
 
-  elif opt=="10":
+  elif opt=="08" or opt=="8":
       cls()
       pkg="groovy"
       pkg_install(pkg)
 
-  elif opt=="11":
+  elif opt=="09" or opt=="9":
       cls()
-      pkg="openjdk"
+      pkg="openjdk-17"
       pkg_install(pkg)
 
-  elif opt=="12":
+  elif opt=="10":
       cls()
-      lpkg=ppkg
-      linux_pkg(lpkg)
       pkg="nodejs"
       pkg_install(pkg)
 
-  elif opt=="13":
+  elif opt=="11":
       cls()
       pkg="kotlin"
       pkg_install(pkg)
 
-  elif opt=="14":
-      cls()
-      pkg="lua"
-      pkg_install(pkg)
-
-  elif opt=="15":
+  elif opt=="12":
       cls()
       pkg="perl"
       pkg_install(pkg)
 
-  elif opt=="16":
+  elif opt=="13":
       cls()
       pkg="php"
       pkg_install(pkg)
 
-  elif opt=="17":
+  elif opt=="14":
       cls()
       pkg="racket"
       pkg_install(pkg)
 
-  elif opt=="18":
+  elif opt=="15":
       cls()
       pkg="ruby"
       pkg_install(pkg)
 
-  elif opt=="19":
+  elif opt=="16":
       cls()
       pkg="rust"
       pkg_install(pkg)
 
-  elif opt=="20":
+  elif opt=="17":
       cls()
       pkg="scala"
       pkg_install(pkg)
 
-  elif opt=="21":
+  elif opt=="18":
       cls()
       pkg="swift"
       pkg_install(pkg)
 
-  elif opt=="22":
+  elif opt=="19":
       cls()
       pkg="mariadb"
       pkg_install(pkg)
 
-  elif opt=="23":
-      cls()
-      pkg="postgresql"
-      pkg_install(pkg)
-
+  elif opt=="20":
+    cls()
+    pkg="postgresql"
+    
   elif opt=="00" or opt=="0":
       cls()
       menu()
     
   else:
-      print("Wrong Enter! please input available option")  
+      print(f"{red} {blod} Wrong Enter! please input available option")  
       os.system("clear") 
       cls()
       os.system("sleep 1")
@@ -511,7 +484,7 @@ def alltools():
     menu()
 
   else:
-      print("Wrong Enter! please input available option")  
+      print(f"{red} {blod} Wrong Enter! please input available option")  
       os.system("clear") 
       cls()
       os.system("sleep 1")
