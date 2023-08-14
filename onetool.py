@@ -93,7 +93,7 @@ def pkg_install(pkg):
    os.system("sleep 2")
    os.system("clear")
    print(f"{green}{blod}Successfully Install !")
-   print(f"{orange}{blod} Now Type {ati} on your Terminal ")
+   print(f"{orange}{blod} Now Type {pkg} on your Terminal ")
      
    
 def funscript():
